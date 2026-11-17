@@ -96,6 +96,20 @@ supporting saved evidence.
 Permanent production deployment, continuous unattended Airflow
 operation, and full fresh-environment retraining are not verified.
 
+## Live Demonstrations
+
+| Project | Hosted application |
+| --- | --- |
+| AIML-01 Fraud Detection | https://aiml01-fraud-detection-demo.netlify.app/ |
+| AIML-03 Movie Recommendation | https://aiml03-movie-recommender.onrender.com/ui/ |
+
+AIML-01 demonstrates historical fraud scoring using a frozen
+feature snapshot. AIML-03 serves movie recommendations using
+FastAPI, TensorFlow, FAISS and Gradio on Render.
+
+The two hosted demonstrations have different runtime scopes.
+Neither establishes a continuously operating production ML pipeline.
+
 ## Repository Layout
 
 ```text
