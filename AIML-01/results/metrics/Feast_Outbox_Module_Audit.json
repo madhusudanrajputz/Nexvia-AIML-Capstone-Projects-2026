@@ -1,0 +1,14 @@
+{
+  "project": "AIML-01",
+  "step": "13N-F",
+  "status": "PASS",
+  "module": "scripts/fraud_feast_outbox.py",
+  "module_sha256": "bd595d68047c3b1b0cf440d0b6dc8ad2ca17756ad9684bb2b5eac23347e2fcb6",
+  "functional_tests_passed": 8,
+  "functional_tests_total": 8,
+  "source_database_modified": false,
+  "source_feast_store_modified": false,
+  "feast_delivery_integrated": false,
+  "atomic_state_and_outbox_creation": false,
+  "live_kafka_consumer_integrated": false
+}

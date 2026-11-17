@@ -1,0 +1,43 @@
+{
+  "project": "AIML-01",
+  "statistics": {
+    "total": 6362620,
+    "fraud": 8213,
+    "flagged": 16,
+    "true_positive_flags": 16,
+    "fraud_origin_zero_before": 41,
+    "fraud_origin_zero_after": 8053,
+    "fraud_destination_zero_before": 5351,
+    "fraud_destination_zero_after": 4091,
+    "fraud_origin_balance_mismatch": 45,
+    "legitimate_origin_balance_mismatch": 3678362,
+    "fraud_in_cashout_transfer": 8213
+  },
+  "unique_source_accounts": 6353307,
+  "unique_destination_accounts": 2722362,
+  "repeated_source_accounts": 9298,
+  "repeated_destination_accounts": 459658,
+  "account_prefix_counts": {
+    "C": 4211125,
+    "M": 2151495
+  },
+  "existing_flag_recall": 0.0019481310118105442,
+  "model_feature_policy": {
+    "allowed_candidate_fields": [
+      "step",
+      "type",
+      "amount",
+      "nameOrig",
+      "nameDest",
+      "oldbalanceOrg",
+      "oldbalanceDest"
+    ],
+    "excluded_from_pre_authorization_scoring": [
+      "newbalanceOrig",
+      "newbalanceDest",
+      "isFraud",
+      "isFlaggedFraud"
+    ],
+    "reason": "Avoid post-transaction information and target leakage in pre-authorization fraud scoring."
+  }
+}

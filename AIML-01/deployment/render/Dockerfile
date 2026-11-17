@@ -1,0 +1,24 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app/api:/app/scripts:/app/deployment/render
+
+WORKDIR /app
+
+COPY deployment/render/requirements.txt /tmp/requirements.txt
+
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+COPY api/ /app/api/
+COPY scripts/fraud_serving_features.py /app/scripts/
+COPY features/XGBoost_Feature_Contract.json /app/features/
+COPY models/xgboost/XGBoost_Unweighted_Baseline.json /app/models/xgboost/
+COPY feast_repo/ /app/feast_repo/
+COPY deployment/render/seed/online_store.db /app/feast_repo/data/online_store.db
+COPY deployment/render/render_app.py /app/deployment/render/
+COPY deployment/render/render_launcher.py /app/deployment/render/
+
+EXPOSE 10000
+
+CMD ["python", "-u", "/app/deployment/render/render_launcher.py"]

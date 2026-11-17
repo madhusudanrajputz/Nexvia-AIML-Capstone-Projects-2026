@@ -1,0 +1,78 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*service-account*.json
+*secret*.env
+
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Node and Next.js generated files
+node_modules/
+.next/
+out/
+dist/
+coverage/
+npm-debug.log*
+*.tsbuildinfo
+
+# Local databases and machine-specific state
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Required Feast metadata and verified demo seed
+!feast_repo/data/registry.db
+!deployment/render/seed/online_store.db
+
+# Large or private datasets
+*.parquet
+*.csv
+*.pcap
+*.pcapng
+*.zip
+*.tar
+*.gz
+*.npz
+*.npy
+
+# Runtime records and logs
+*.log
+*.pid
+*.tmp
+*.bak
+*.backup.*
+*.backup.*.py
+*.backup.*.yaml
+*.backup.*.yml
+
+# Local outputs and experiment state
+data/
+mlflow/
+screenshots/
+FINAL_FOR_REVIEW/
+feast_repo_full/
+
+# Keep the verified deployment seed
+!deployment/render/seed/seed_manifest.json
+
+# IDE and OS metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

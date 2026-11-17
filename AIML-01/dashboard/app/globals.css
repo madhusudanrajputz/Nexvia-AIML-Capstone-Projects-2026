@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172b43;
+  background: #f4f7fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 252px;
+  flex-shrink: 0;
+  background: #14283f;
+  color: white;
+  padding: 30px 22px;
+  display: flex;
+  flex-direction: column;
+}
+.brand { font-weight: 800; font-size: 23px; }
+.brand-subtitle { color: #a9bfd3; margin-top: 5px; font-size: 12px; }
+.nav { display: grid; gap: 16px; margin-top: 46px; font-size: 13px; }
+.nav span { color: #a9bfd3; }
+.nav .nav-active {
+  background: #254461;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+.sidebar-footer {
+  margin-top: auto;
+  color: #a9bfd3;
+  font-size: 11px;
+}
+.workspace { flex: 1; padding: 35px; min-width: 0; }
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+h1 { margin: 6px 0; font-size: 27px; }
+h2 { margin: 8px 0; font-size: 21px; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #59718b;
+}
+.muted { color: #63788e; line-height: 1.6; }
+.status {
+  background: #fff0d7;
+  color: #805200;
+  border-radius: 999px;
+  padding: 9px 13px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.notice {
+  margin: 28px 0;
+  padding: 16px;
+  background: #fff;
+  border-left: 4px solid #da9b35;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.panel {
+  background: white;
+  border: 1px solid #e2eaf2;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 3px 14px rgba(30, 55, 80, .035);
+}
+@media (max-width: 900px) {
+  .shell { display: block; }
+  .sidebar { width: 100%; min-height: auto; }
+  .nav { margin: 18px 0; }
+  .sidebar-footer { display: none; }
+  .workspace { padding: 20px; }
+  .topbar { flex-direction: column; }
+  .cards { grid-template-columns: 1fr; }
+}
+
+
+.nav a {
+  color: #d7e7f5;
+  text-decoration: none;
+}
+.nav a:hover, .nav a:focus-visible {
+  color: white;
+  text-decoration: underline;
+}

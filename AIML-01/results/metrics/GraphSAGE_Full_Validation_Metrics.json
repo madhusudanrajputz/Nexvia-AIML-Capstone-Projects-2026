@@ -1,0 +1,32 @@
+{
+  "project": "AIML-01",
+  "stage": "11H",
+  "evaluation": "full_chronological_validation",
+  "transactions_evaluated": 943289,
+  "fraud_transactions": 560,
+  "fraud_prevalence": 0.00059366747624535,
+  "metrics": {
+    "average_precision": 0.02085182769073154,
+    "roc_auc": 0.946463511783344,
+    "precision_at_0_5": 0.0025416119197033266,
+    "recall_at_0_5": 0.8946428571428572,
+    "f1_at_0_5": 0.005068823699027211,
+    "fpr_at_0_5": 0.20856258797597188,
+    "tp": 501,
+    "fp": 196618,
+    "tn": 746111,
+    "fn": 59
+  },
+  "model_checkpoint": "models/gnn/GraphSAGE_Best_Model.pt",
+  "completed_inference_parts": 116,
+  "new_parts_this_run": 116,
+  "reused_parts_this_run": 0,
+  "sampled_prediction_parity": true,
+  "sampled_parity_count": 1600,
+  "sampled_parity_max_difference": 2.3454757691609984e-07,
+  "chronological_context_only": true,
+  "test_dataset_evaluated": false,
+  "model_retrained": false,
+  "production_approved": false,
+  "completed_at_utc": "2026-11-04T16:03:49.107975+00:00"
+}

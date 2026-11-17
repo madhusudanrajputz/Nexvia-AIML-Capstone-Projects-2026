@@ -1,0 +1,22 @@
+{
+    "audit_name": "Strict_Point_In_Time_Feature_Verification",
+    "created_at_utc": "2026-10-22T06:14:00.474638+00:00",
+    "dataset_rows": 195359,
+    "user_timestamp_groups": 158028,
+    "user_activity_match_percent": 100.0,
+    "user_historical_average_match_percent": 100.0,
+    "movie_previous_count_match_percent": 100.0,
+    "movie_previous_average_match_percent": 100.0,
+    "same_timestamp_user_feature_consistency_percent": 100.0,
+    "mismatching_user_timestamp_groups": 0,
+    "historical_feature_audit": "PASS",
+    "overall_pipeline_audit": "PARTIAL_PASS_WITH_LIMITATIONS",
+    "model_promotion_approved": false,
+    "remaining_limitations": [
+        "Retrieval and ranking models use different training cutoffs.",
+        "Evaluation contains only 55 selected users.",
+        "Model training and preprocessing code require final reproducibility review.",
+        "No real online A/B testing has been conducted.",
+        "Actual NVIDIA Triton server inference has not been tested."
+    ]
+}

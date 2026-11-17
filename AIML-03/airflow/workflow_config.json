@@ -1,0 +1,21 @@
+{
+    "dag_id": "aiml03_retraining_preflight",
+    "project": "AIML-03",
+    "airflow_target": "3.x",
+    "timezone": "Asia/Kolkata",
+    "schedule": null,
+    "automatic_retraining_enabled": false,
+    "implemented_tasks": [
+        "validate_existing_artifacts"
+    ],
+    "planned_tasks": [
+        "validate_new_data",
+        "prepare_chronological_features",
+        "train_two_tower",
+        "train_ranking_model",
+        "evaluate_candidate_models",
+        "rebuild_faiss_index",
+        "promote_models_if_approved"
+    ],
+    "deployment_status": "DAG source preparation"
+}

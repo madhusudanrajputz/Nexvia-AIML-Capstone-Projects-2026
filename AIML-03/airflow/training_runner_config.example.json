@@ -1,0 +1,9 @@
+{
+  "project_dir": "/path/to/AIML-03",
+  "training_python": "/path/to/python",
+  "training_script": "/path/to/AIML-03/training/train_retrieval.py",
+  "mode": "smoke",
+  "epochs": 1,
+  "output_name": "retrieval_airflow_smoke",
+  "promotion_enabled": false
+}

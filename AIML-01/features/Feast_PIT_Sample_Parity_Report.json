@@ -1,0 +1,32 @@
+{
+  "project": "AIML-01",
+  "stage": "12G",
+  "status": "sample_point_in_time_parity_passed",
+  "sample_transactions": 200,
+  "sample_composition": {
+    "train_existing_pilot": 50,
+    "train_new_nonpilot": 50,
+    "validation_existing_pilot": 50,
+    "validation_new_nonpilot": 50
+  },
+  "historical_feature_count": 8,
+  "comparisons": 1600,
+  "total_mismatches": 0,
+  "feature_mismatches": {
+    "origin_previous_count": 0,
+    "origin_previous_total": 0,
+    "origin_previous_mean": 0,
+    "origin_hours_since_previous": 0,
+    "destination_previous_count": 0,
+    "destination_previous_total": 0,
+    "destination_previous_mean": 0,
+    "destination_hours_since_previous": 0
+  },
+  "feature_store": "feast_repo_full",
+  "full_23_feature_parity_pending": true,
+  "online_store_parity_pending": true,
+  "hours_since_previous_freshness_check_pending": true,
+  "test_data_used": false,
+  "models_modified": false,
+  "created_at_utc": "2026-11-04T16:42:57.915731+00:00"
+}

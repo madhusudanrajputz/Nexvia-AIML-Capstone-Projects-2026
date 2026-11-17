@@ -1,0 +1,36 @@
+*
+!api/
+!api/*.py
+!scripts/
+!scripts/fraud_serving_features.py
+!features/
+!features/XGBoost_Feature_Contract.json
+!models/
+!models/xgboost/
+!models/xgboost/XGBoost_Unweighted_Baseline.json
+!feast_repo/
+!feast_repo/**
+!dashboard/
+!dashboard/**
+dashboard/node_modules/
+dashboard/.next/
+**/__pycache__/
+**/*.pyc
+**/.env
+**/.env.*
+
+# Render deployment build files
+!deployment/
+!deployment/render/
+!deployment/render/Dockerfile
+!deployment/render/requirements.txt
+!deployment/render/render_app.py
+!deployment/render/render_launcher.py
+
+# Verified Render Feast demo seed
+!deployment/render/seed/
+!deployment/render/seed/online_store.db
+!deployment/render/seed/seed_manifest.json
+
+# Exclude large offline Feast source files
+feast_repo/full_data/

@@ -1,0 +1,157 @@
+{
+  "project": "AIML-01",
+  "stage": "12I",
+  "transactions": 200,
+  "total_model_features": 23,
+  "independently_reconstructed_features": 19,
+  "direct_feature_results": [
+    {
+      "feature": "amount_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 1.7763568394002505e-15
+    },
+    {
+      "feature": "origin_balance_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 1.7763568394002505e-15
+    },
+    {
+      "feature": "destination_balance_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 1.7763568394002505e-15
+    },
+    {
+      "feature": "origin_previous_count",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_previous_total_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_previous_mean_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_hours_since_previous",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_count",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_total_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_mean_log",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 1.7763568394002505e-15
+    },
+    {
+      "feature": "destination_hours_since_previous",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_has_history",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_has_history",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_balance_insufficient",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_cash_in",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_cash_out",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_debit",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_payment",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_transfer",
+      "matches": 200,
+      "mismatches": 0,
+      "maximum_absolute_difference": 0.0
+    }
+  ],
+  "direct_feature_parity_pass": true,
+  "ratio_candidates": {
+    "amount_vs_origin_mean": {
+      "best_candidate": "amount_div_denominator_if_positive_else_zero",
+      "best_matches": 200,
+      "best_mismatches": 0,
+      "all_rows_matched": true
+    },
+    "amount_vs_destination_mean": {
+      "best_candidate": "amount_div_denominator_if_positive_else_zero",
+      "best_matches": 200,
+      "best_mismatches": 0,
+      "all_rows_matched": true
+    },
+    "amount_to_origin_balance": {
+      "best_candidate": "amount_div_denominator_plus_1",
+      "best_matches": 200,
+      "best_mismatches": 0,
+      "all_rows_matched": true
+    },
+    "amount_to_destination_balance": {
+      "best_candidate": "amount_div_denominator_plus_1",
+      "best_matches": 200,
+      "best_mismatches": 0,
+      "all_rows_matched": true
+    }
+  },
+  "ratio_candidates_match_200_rows": true,
+  "status": "CANDIDATE_FORMULAS_IDENTIFIED_FOR_200_SAMPLES",
+  "ratio_formulas_independently_confirmed": false,
+  "all_23_feature_serving_parity_approved": false,
+  "online_feature_parity_completed": false,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T16:46:56.753265+00:00"
+}

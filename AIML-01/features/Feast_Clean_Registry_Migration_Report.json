@@ -1,0 +1,59 @@
+{
+  "project": "AIML-01",
+  "stage": "12D_FIX",
+  "result": "fresh_isolated_feast_apply_passed",
+  "feast_version": "0.67.0",
+  "working_repository": "/content/aiml01_feast_clean_12d",
+  "working_repository_is_ephemeral": true,
+  "old_registry_copied": false,
+  "old_online_store_copied": false,
+  "registered_entities": [
+    {
+      "name": "origin_account",
+      "join_key": "nameOrig"
+    },
+    {
+      "name": "destination_account",
+      "join_key": "nameDest"
+    }
+  ],
+  "registered_views": [
+    {
+      "name": "destination_account_history",
+      "source_path": "/content/aiml01_feast_clean_12d/data/destination_account_history.parquet",
+      "source_exists": true,
+      "features": [
+        "destination_previous_total",
+        "destination_previous_count",
+        "destination_previous_mean",
+        "destination_hours_since_previous"
+      ]
+    },
+    {
+      "name": "origin_account_history",
+      "source_path": "/content/aiml01_feast_clean_12d/data/origin_account_history.parquet",
+      "source_exists": true,
+      "features": [
+        "origin_previous_mean",
+        "origin_hours_since_previous",
+        "origin_previous_count",
+        "origin_previous_total"
+      ]
+    }
+  ],
+  "historical_feature_count": 8,
+  "original_files_sha256": {
+    "feature_store.yaml": "d77c3f8dd495b0b15a93edaaf30fe0d78e9687214fd4f4534bc919d4ce9e8781",
+    "fraud_features.py": "c192852c85be2797ed89710ac80cd6452560ace036d315bf936c7c1502601caf",
+    "data/registry.db": "69a539a35c8ae7a193b8d47dbee6c64a039f82e7d0db37b21dcf250b78d7a7df",
+    "data/online_store.db": "4faae1bc085ff0cca1003bcc6f78f50a6a7e9ee058e6135f5a207f72c3645377",
+    "data/origin_account_history.parquet": "b643a7fcb7b9f0ad8b32da0607a503cd5716b19595899bd56c57fbb11be691c9",
+    "data/destination_account_history.parquet": "7b979110057927007a9f5809a630964d307043fbb6e3363abc02d680f27f25d9"
+  },
+  "original_files_unchanged": true,
+  "historical_feature_parity_pending": true,
+  "online_store_population_pending": true,
+  "production_reproducibility_pending": true,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T16:31:55.842863+00:00"
+}

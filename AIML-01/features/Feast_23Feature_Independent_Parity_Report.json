@@ -1,0 +1,235 @@
+{
+  "project": "AIML-01",
+  "stage": "12J",
+  "audit_result": "PASS",
+  "sample_rows": 58485,
+  "fraud_rows": 4203,
+  "feature_count": 23,
+  "feature_order": [
+    "amount_log",
+    "origin_balance_log",
+    "destination_balance_log",
+    "type_cash_in",
+    "type_cash_out",
+    "type_debit",
+    "type_payment",
+    "type_transfer",
+    "origin_previous_count",
+    "origin_previous_total_log",
+    "origin_previous_mean_log",
+    "origin_hours_since_previous",
+    "destination_previous_count",
+    "destination_previous_total_log",
+    "destination_previous_mean_log",
+    "destination_hours_since_previous",
+    "amount_vs_origin_mean",
+    "amount_vs_destination_mean",
+    "amount_to_origin_balance",
+    "amount_to_destination_balance",
+    "origin_has_history",
+    "destination_has_history",
+    "origin_balance_insufficient"
+  ],
+  "total_comparisons": 1345155,
+  "total_mismatches": 0,
+  "feature_results": [
+    {
+      "feature": "amount_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_balance_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_balance_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_cash_in",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_cash_out",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_debit",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_payment",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "type_transfer",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_previous_count",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_previous_total_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_previous_mean_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_hours_since_previous",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_count",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_total_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_previous_mean_log",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_hours_since_previous",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "amount_vs_origin_mean",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "amount_vs_destination_mean",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 1.4210854715202004e-14
+    },
+    {
+      "feature": "amount_to_origin_balance",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "amount_to_destination_balance",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_has_history",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "destination_has_history",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "feature": "origin_balance_insufficient",
+      "rows": 58485,
+      "matched": 58485,
+      "mismatched": 0,
+      "max_absolute_difference": 0.0
+    }
+  ],
+  "ratio_edge_case_counts": {
+    "origin_mean_zero": 58404,
+    "destination_mean_zero": 26152,
+    "origin_balance_zero": 18064,
+    "destination_balance_zero": 25520
+  },
+  "formula_expressions": {
+    "amount_log": "LN(1 + GREATEST(h.amount, 0))",
+    "origin_balance_log": "LN(1 + GREATEST(h.oldbalanceOrg, 0))",
+    "destination_balance_log": "LN(1 + GREATEST(h.oldbalanceDest, 0))",
+    "type_cash_in": "CASE WHEN h.type = 'CASH_IN' THEN 1 ELSE 0 END",
+    "type_cash_out": "CASE WHEN h.type = 'CASH_OUT' THEN 1 ELSE 0 END",
+    "type_debit": "CASE WHEN h.type = 'DEBIT' THEN 1 ELSE 0 END",
+    "type_payment": "CASE WHEN h.type = 'PAYMENT' THEN 1 ELSE 0 END",
+    "type_transfer": "CASE WHEN h.type = 'TRANSFER' THEN 1 ELSE 0 END",
+    "origin_previous_count": "COALESCE(h.origin_previous_count, 0)",
+    "origin_previous_total_log": "LN(1 + GREATEST(COALESCE(h.origin_previous_total, 0), 0))",
+    "origin_previous_mean_log": "LN(1 + GREATEST(COALESCE(h.origin_previous_mean, 0), 0))",
+    "origin_hours_since_previous": "COALESCE(h.origin_hours_since_previous, 0)",
+    "destination_previous_count": "COALESCE(h.destination_previous_count, 0)",
+    "destination_previous_total_log": "LN(1 + GREATEST(COALESCE(h.destination_previous_total, 0), 0))",
+    "destination_previous_mean_log": "LN(1 + GREATEST(COALESCE(h.destination_previous_mean, 0), 0))",
+    "destination_hours_since_previous": "COALESCE(h.destination_hours_since_previous, 0)",
+    "amount_vs_origin_mean": "CASE WHEN h.origin_previous_mean > 0\n           THEN h.amount / h.origin_previous_mean\n           ELSE 0 END",
+    "amount_vs_destination_mean": "CASE WHEN h.destination_previous_mean > 0\n           THEN h.amount / h.destination_previous_mean\n           ELSE 0 END",
+    "amount_to_origin_balance": "h.amount / (h.oldbalanceOrg + 1)",
+    "amount_to_destination_balance": "h.amount / (h.oldbalanceDest + 1)",
+    "origin_has_history": "CASE WHEN h.origin_previous_count > 0 THEN 1 ELSE 0 END",
+    "destination_has_history": "CASE WHEN h.destination_previous_count > 0 THEN 1 ELSE 0 END",
+    "origin_balance_insufficient": "CASE WHEN h.amount > h.oldbalanceOrg THEN 1 ELSE 0 END"
+  },
+  "source_feature_values": "Current transaction plus prior-hour account history, without copied ratio columns",
+  "uses_test_data": false,
+  "model_modified": false,
+  "online_serving_verified": false,
+  "full_population_parity_verified": false,
+  "created_at_utc": "2026-11-04T16:48:58.183765+00:00"
+}

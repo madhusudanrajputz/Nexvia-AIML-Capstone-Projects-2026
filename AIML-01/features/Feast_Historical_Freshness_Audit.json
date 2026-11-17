@@ -1,0 +1,46 @@
+{
+  "project": "AIML-01",
+  "stage": "12M",
+  "status": "PASS",
+  "validation_hour": 377,
+  "sample_transactions": 12,
+  "history_cutoff": "step < 377",
+  "history_reconstruction": "raw prior-hour transactions",
+  "role_feature_mismatches": {
+    "origin": {
+      "count": 0,
+      "total": 0,
+      "mean": 0,
+      "hours": 0
+    },
+    "destination": {
+      "count": 0,
+      "total": 0,
+      "mean": 0,
+      "hours": 0
+    }
+  },
+  "historical_comparisons": 96,
+  "historical_mismatches": 0,
+  "same_hour_account_checks": {
+    "origin": {
+      "accounts": 12,
+      "events": 12,
+      "repeated_accounts": 0,
+      "inconsistent_accounts": 0
+    },
+    "destination": {
+      "accounts": 12,
+      "events": 12,
+      "repeated_accounts": 0,
+      "inconsistent_accounts": 0
+    }
+  },
+  "same_hour_inconsistencies": 0,
+  "test_data_used": false,
+  "existing_models_modified": false,
+  "existing_feast_store_modified": false,
+  "streaming_state_updater_implemented": false,
+  "inactive_account_freshness_fully_verified": false,
+  "completed_at_utc": "2026-11-04T17:02:06.403017+00:00"
+}

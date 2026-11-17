@@ -1,0 +1,23 @@
+{
+  "policy_version": "14C-dev-1",
+  "scope": "offline_development",
+  "feature_warning_count_min": 1,
+  "dataset_warning_drift_share_min": 0.2,
+  "critical_feature_warning": true,
+  "critical_features": [
+    "amount_log",
+    "origin_balance_log",
+    "destination_balance_log",
+    "origin_hours_since_previous",
+    "destination_hours_since_previous",
+    "amount_to_origin_balance",
+    "amount_to_destination_balance",
+    "origin_balance_insufficient"
+  ],
+  "automatic_retraining_enabled": false,
+  "automatic_model_promotion_enabled": false,
+  "requires_temporal_sampling_review": true,
+  "requires_model_performance_validation": true,
+  "requires_human_approval_for_retraining": true,
+  "requires_independent_holdout_before_promotion": true
+}

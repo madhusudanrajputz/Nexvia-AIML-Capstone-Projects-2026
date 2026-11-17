@@ -1,0 +1,45 @@
+{
+    "comparison": "Two-Tower V1 vs Two-Tower V2",
+    "evaluation_type": "paired_offline_bootstrap",
+    "evaluated_users": 55,
+    "bootstrap_iterations": 10000,
+    "random_seed": 42,
+    "confidence_interval": "95% percentile bootstrap",
+    "resampling_unit": "user",
+    "difference_direction": "V2 minus V1",
+    "promotion_approved": false,
+    "limitations": [
+        "Only 55 selected evaluation users",
+        "Preliminary validation sample, not full MovieLens evaluation",
+        "Confidence intervals depend on the representativeness of selected users",
+        "Bootstrap intervals do not establish causality",
+        "Offline ranking metrics are not real-world click or conversion metrics",
+        "Popularity vs Two-Stage paired evaluation remains pending"
+    ],
+    "results": [
+        {
+            "metric": "recall_at_10",
+            "evaluated_users": 55,
+            "mean_v1": 0.018658756542796463,
+            "mean_v2": 0.007444889047065456,
+            "mean_difference_v2_minus_v1": -0.011213867495731005,
+            "ci_95_lower": -0.023284854016339555,
+            "ci_95_upper": -0.00025715930049910484,
+            "v2_better_users": 4,
+            "v2_worse_users": 10,
+            "equal_users": 41
+        },
+        {
+            "metric": "ndcg_at_10",
+            "evaluated_users": 55,
+            "mean_v1": 0.041214253226062016,
+            "mean_v2": 0.01340503670651493,
+            "mean_difference_v2_minus_v1": -0.027809216519547087,
+            "ci_95_lower": -0.055528894267343566,
+            "ci_95_upper": -0.004984912946087388,
+            "v2_better_users": 4,
+            "v2_worse_users": 11,
+            "equal_users": 40
+        }
+    ]
+}

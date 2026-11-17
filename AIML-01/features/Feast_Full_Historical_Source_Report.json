@@ -1,0 +1,46 @@
+{
+  "project": "AIML-01",
+  "stage": "12E",
+  "status": "full_historical_sources_created",
+  "train_validation_transactions": 5406876,
+  "origin_account_hour_snapshots": 5406834,
+  "destination_account_hour_snapshots": 5098915,
+  "pilot_split_distribution": [
+    {
+      "split": "test",
+      "rows": 500
+    },
+    {
+      "split": "train",
+      "rows": 2000
+    },
+    {
+      "split": "validation",
+      "rows": 500
+    }
+  ],
+  "eligible_pilot_rows": 2500,
+  "excluded_pilot_rows": 500,
+  "split_aware_parity": {
+    "origin": {
+      "eligible_pilot_rows": 2500,
+      "missing": 0,
+      "mismatched": 0
+    },
+    "destination": {
+      "eligible_pilot_rows": 2500,
+      "missing": 0,
+      "mismatched": 0
+    }
+  },
+  "historical_semantics": "prior_hours_only",
+  "same_hour_consistency_verified_in_initial_build": true,
+  "full_origin_file": "feast_repo/full_data/origin_account_history_full.parquet",
+  "full_destination_file": "feast_repo/full_data/destination_account_history_full.parquet",
+  "test_rows_used_to_build_full_sources": false,
+  "test_labels_used": false,
+  "feast_registration_pending": true,
+  "point_in_time_retrieval_pending": true,
+  "online_parity_pending": true,
+  "created_at_utc": "2026-11-04T16:36:49.752641+00:00"
+}

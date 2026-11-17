@@ -1,0 +1,18 @@
+{
+  "project": "AIML-01",
+  "total_rows": 6362620,
+  "structural_checks": {
+    "Total transaction count": true,
+    "Unique transaction IDs": true,
+    "Fraud labels preserved": true,
+    "First-hour history zero": true,
+    "No negative historical counts": true,
+    "Post-transaction fields excluded": true
+  },
+  "sampled_accounts": 12,
+  "sampled_accounts_passed": 12,
+  "independent_history_audit_pass": true,
+  "same_hour_excluded_from_history": true,
+  "post_transaction_features_excluded": true,
+  "audit_scope": "Full dataset structural checks and independent history verification for 12 samples"
+}

@@ -1,0 +1,32 @@
+{
+  "project": "AIML-01",
+  "stage": "11C",
+  "sample_count": 4800,
+  "training_targets": 3200,
+  "validation_targets": 1600,
+  "sampled_training_fraud": 800,
+  "sampled_validation_fraud": 160,
+  "context_records": 16404,
+  "max_context_edges_per_account_role": 12,
+  "sampling_method": "Deterministic stratified targets",
+  "context_source": "Earlier train/validation transactions",
+  "current_and_same_hour_edges_excluded": true,
+  "future_edges_excluded": true,
+  "context_fraud_labels_excluded": true,
+  "test_transactions_excluded": true,
+  "validation_sampling_is_representative": false,
+  "sample_validation_metrics_comparable_to_full_validation": false,
+  "full_chronological_validation_required": true,
+  "structural_checks": {
+    "Target count": true,
+    "Unique targets": true,
+    "No same-hour/future context": true,
+    "No current target edge": true,
+    "No test-hour context": true,
+    "Account relationships valid": true,
+    "History limit respected": true,
+    "No fraud label in context": true
+  },
+  "gnn_trained": false,
+  "created_at_utc": "2026-11-04T15:27:52.254977+00:00"
+}

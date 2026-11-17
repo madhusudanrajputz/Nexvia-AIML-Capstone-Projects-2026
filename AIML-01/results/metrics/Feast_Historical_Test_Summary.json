@@ -1,0 +1,10 @@
+{
+  "project": "AIML-01",
+  "component": "Feast historical retrieval",
+  "pilot_samples": 150,
+  "feature_count": 8,
+  "feature_value_checks_passed": 8,
+  "feature_value_checks_total": 8,
+  "overall_pass": true,
+  "scope": "Selected pilot snapshots only; full-dataset Feast retrieval and online consistency not yet tested"
+}

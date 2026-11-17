@@ -1,0 +1,20 @@
+{
+  "project": "AIML-01",
+  "stage": "9H",
+  "model": "XGBoost_Unweighted_Baseline",
+  "selected_trees": 171,
+  "feature_count": 23,
+  "validation_sample_rows": 2000,
+  "fraud_sample_rows": 180,
+  "legitimate_sample_rows": 1820,
+  "shap_units": "raw_log_odds",
+  "shap_margin_reconstruction_pass": true,
+  "shap_max_absolute_margin_error": 1.9073486328125e-05,
+  "class_prevalence_adjusted": true,
+  "sampling_limitation": "2,000 stratified validation samples; SHAP summaries are estimates, not a full-dataset explanation",
+  "individual_explanations_are_associational": true,
+  "causal_explanations_claimed": false,
+  "test_dataset_used": false,
+  "models_retrained": false,
+  "completed_at_utc": "2026-11-04T14:55:26.571934+00:00"
+}

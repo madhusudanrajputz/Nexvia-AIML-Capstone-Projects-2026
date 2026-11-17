@@ -1,0 +1,31 @@
+{
+  "project": "AIML-01",
+  "step": "13L",
+  "status": "PASS",
+  "kafka_events_buffered": 40,
+  "origin_accounts": 40,
+  "destination_accounts": 40,
+  "hour_377_mismatches": 0,
+  "same_hour_mismatches": 0,
+  "hour_378_mismatches": 0,
+  "hour_382_mismatches": 0,
+  "feature_comparisons": 1280,
+  "total_mismatches": 0,
+  "hour_boundary_commit_verified": true,
+  "inactive_age_refresh_verified": true,
+  "isolated_online_feast_writes_verified": true,
+  "full_transaction_stream_replayed": false,
+  "duplicate_recovery_integrated": false,
+  "late_event_policy_integrated": false,
+  "scope": "Forty previously verified Kafka events, with account history bootstrapped at step 377",
+  "not_claimed": [
+    "Full PaySim transaction replay",
+    "Atomic Kafka-state-Feast recovery",
+    "Late-event watermark handling",
+    "Production deployment"
+  ],
+  "original_models_modified": false,
+  "original_feast_database_modified": false,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T17:51:38.968381+00:00"
+}

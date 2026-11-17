@@ -1,0 +1,117 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aiml01-demo
+  labels:
+    app: aiml01-demo
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: aiml01-demo
+  template:
+    metadata:
+      labels:
+        app: aiml01-demo
+    spec:
+      containers:
+        - name: feast
+          image: aiml01-backend:demo
+          imagePullPolicy: IfNotPresent
+          command: ["python", "-u", "feast_feature_service.py"]
+          workingDir: /app/api
+          env:
+            - name: AIML_FEAST_REPO
+              value: /app/feast_repo
+            - name: AIML_FEAST_PORT
+              value: "8765"
+
+        - name: fraud-api
+          image: aiml01-backend:demo
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: AIML01_PROJECT
+              value: /app
+            - name: AIML01_FEAST_REPO
+              value: /app/feast_repo
+            - name: AIML01_FEAST_PYTHON
+              value: /usr/local/bin/python
+            - name: AIML01_FEAST_SERVICE_URL
+              value: http://127.0.0.1:8765
+            - name: AIML01_ENABLE_DEMO_PREDICT
+              value: "1"
+            - name: AIML01_DEPLOYMENT_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aiml01-demo-secrets
+                  key: backend-api-key
+
+        - name: cases-api
+          image: aiml01-backend:demo
+          imagePullPolicy: IfNotPresent
+          command:
+            - uvicorn
+            - cases_deployment:app
+            - --host
+            - 0.0.0.0
+            - --port
+            - "8001"
+          workingDir: /app/api
+          ports:
+            - containerPort: 8001
+          env:
+            - name: AIML01_CASES_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aiml01-demo-secrets
+                  key: cases-api-key
+          volumeMounts:
+            - name: case-state
+              mountPath: /app/case_state
+
+        - name: dashboard
+          image: aiml01-dashboard:demo
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: AIML01_BACKEND_URL
+              value: http://127.0.0.1:8000
+            - name: AIML01_CASES_SERVICE_URL
+              value: http://127.0.0.1:8001
+            - name: AIML01_BACKEND_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aiml01-demo-secrets
+                  key: backend-api-key
+            - name: AIML01_CASES_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: aiml01-demo-secrets
+                  key: cases-api-key
+            - name: AIML01_DASHBOARD_ACCESS_CODE
+              valueFrom:
+                secretKeyRef:
+                  name: aiml01-demo-secrets
+                  key: dashboard-access-code
+
+      volumes:
+        - name: case-state
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aiml01-dashboard
+spec:
+  type: ClusterIP
+  selector:
+    app: aiml01-demo
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000

@@ -1,0 +1,22 @@
+{
+  "project": "AIML-01",
+  "step": "13N-J",
+  "status": "PASS",
+  "topic": "aiml01_13nj_test_d8657142f187",
+  "consumer_group": "aiml01_13nj_group_d8657142f187",
+  "real_kafka_messages": 2,
+  "offset_replay_verified": true,
+  "final_kafka_offset": 2,
+  "final_sqlite_offset": 2,
+  "atomic_state_outbox_offset": true,
+  "outbox_tasks_completed": 2,
+  "feast_feature_checks": 648,
+  "feast_mismatches": 0,
+  "repeated_delivery_noop": true,
+  "original_artifacts_unchanged": true,
+  "controlled_restart_tested": true,
+  "actual_process_kill_tested": false,
+  "dlq_integrated": false,
+  "multi_partition_ordering_tested": false,
+  "production_ready": false
+}

@@ -1,0 +1,12 @@
+{
+  "project": "AIML-01",
+  "component": "Feast Feature Store",
+  "feast_version": "0.67.0",
+  "python_environment": "/content/aiml01_feast_env",
+  "feature_dataset": "data/processed/PaySim_Historical_Features.parquet",
+  "installation_verified": true,
+  "feature_views_registered": false,
+  "historical_retrieval_tested": false,
+  "online_retrieval_tested": false,
+  "verified_at_utc": "2026-11-04T08:58:10.202310+00:00"
+}

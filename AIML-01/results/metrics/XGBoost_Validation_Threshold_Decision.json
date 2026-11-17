@@ -1,0 +1,24 @@
+{
+  "project": "AIML-01",
+  "stage": "9E",
+  "dataset": "chronological_validation",
+  "test_evaluated": false,
+  "selected_model": "Unweighted",
+  "selected_policy": "fpr_budget_0_01pct",
+  "selected_threshold": 0.48456997,
+  "validation_fpr_budget": 0.0001,
+  "validation_recall": 0.9,
+  "validation_precision": 0.842809364548495,
+  "validation_f1": 0.8704663212435233,
+  "validation_false_positives": 94,
+  "validation_missed_frauds": 56,
+  "selection_rule": "Maximize validation recall subject to FPR <= 0.0001; tie-break by precision and average precision",
+  "limitations": [
+    "Threshold selected using validation labels",
+    "Validation performance may be optimistic after selection",
+    "Test set reserved for final evaluation",
+    "No probability calibration performed yet",
+    "No production fraud cost assumptions established"
+  ],
+  "created_at_utc": "2026-11-04T09:58:52.339311+00:00"
+}

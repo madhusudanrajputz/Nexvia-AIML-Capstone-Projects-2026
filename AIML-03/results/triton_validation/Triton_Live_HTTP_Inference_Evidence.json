@@ -1,0 +1,23 @@
+{
+  "component": "NVIDIA Triton Inference Server",
+  "server_version": "2.74.0",
+  "model": "ranking",
+  "backend": "onnxruntime",
+  "device": "CPU",
+  "server_ready": true,
+  "model_ready": true,
+  "http_status": 200,
+  "onnx_prediction": [
+    [
+      0.5337831377983093
+    ]
+  ],
+  "triton_prediction": [
+    [
+      0.5337831377983093
+    ]
+  ],
+  "maximum_absolute_difference": 0.0,
+  "latency_ms_single_request": 4.21,
+  "result": "PASS"
+}

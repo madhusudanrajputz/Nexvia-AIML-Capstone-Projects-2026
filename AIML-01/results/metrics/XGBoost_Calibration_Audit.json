@@ -1,0 +1,69 @@
+{
+  "project": "AIML-01",
+  "stage": "9F",
+  "method": "sigmoid_platt_scaling",
+  "source": "saved_chronological_validation_predictions",
+  "calibration_fraction": 0.6,
+  "diagnostic_fraction": 0.4,
+  "model_artifacts": {
+    "Unweighted": "models/xgboost/Calibration_Platt_Unweighted.joblib",
+    "Weighted_SqrtRatio": "models/xgboost/Calibration_Platt_Weighted_SqrtRatio.joblib"
+  },
+  "diagnostic_results": [
+    {
+      "model": "Unweighted",
+      "calibration": "Original",
+      "diagnostic_rows": 377316,
+      "diagnostic_fraud": 260,
+      "average_precision": 0.9745281236113186,
+      "roc_auc": 0.9999808638912645,
+      "brier_score": 9.309723258080849e-05,
+      "log_loss": 0.0002775664519350001,
+      "ece_10_quantile_bins": 2.91346064375605e-05
+    },
+    {
+      "model": "Unweighted",
+      "calibration": "Platt",
+      "diagnostic_rows": 377316,
+      "diagnostic_fraud": 260,
+      "average_precision": 0.9745281236113186,
+      "roc_auc": 0.9999808638912645,
+      "brier_score": 9.23384889723156e-05,
+      "log_loss": 0.00027588680359797525,
+      "ece_10_quantile_bins": 2.1514420612429537e-05
+    },
+    {
+      "model": "Weighted_SqrtRatio",
+      "calibration": "Original",
+      "diagnostic_rows": 377316,
+      "diagnostic_fraud": 260,
+      "average_precision": 0.9674615604730354,
+      "roc_auc": 0.9999779618534526,
+      "brier_score": 0.00022244120626624796,
+      "log_loss": 0.0016465852760800784,
+      "ece_10_quantile_bins": 0.001078589192043751
+    },
+    {
+      "model": "Weighted_SqrtRatio",
+      "calibration": "Platt",
+      "diagnostic_rows": 377316,
+      "diagnostic_fraud": 260,
+      "average_precision": 0.9674615604730353,
+      "roc_auc": 0.9999779618534526,
+      "brier_score": 9.816792435395473e-05,
+      "log_loss": 0.00030948086075598526,
+      "ece_10_quantile_bins": 2.008551615813599e-05
+    }
+  ],
+  "threshold_policy_unchanged": true,
+  "original_selected_threshold": 0.48456997,
+  "calibration_deployed": false,
+  "test_dataset_used": false,
+  "limitations": [
+    "Original model and threshold selection used validation labels",
+    "Calibration diagnostics are not independent final test results",
+    "Original threshold is not valid for calibrated probabilities without retuning",
+    "PaySim dataset is synthetic"
+  ],
+  "completed_at_utc": "2026-11-04T14:44:34.198586+00:00"
+}

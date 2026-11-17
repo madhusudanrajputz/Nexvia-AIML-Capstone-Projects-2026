@@ -1,0 +1,11 @@
+# AIML-01 free Netlify demonstration
+# Build settings only. Secrets belong in Netlify environment variables.
+
+[build]
+  base = "dashboard"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"

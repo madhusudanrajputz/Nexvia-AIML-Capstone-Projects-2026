@@ -1,0 +1,30 @@
+{
+  "project": "AIML-01",
+  "stage": "12N",
+  "status": "PASS",
+  "module": "scripts/fraud_streaming_state.py",
+  "module_sha256": "6d58fb446d578b4633406ff82a69c1ace62c5fa9ee0e8025c345443e839374ee",
+  "synthetic_same_hour_buffering_pass": true,
+  "hour_transition_commit_pass": true,
+  "inactive_account_age_pass": true,
+  "origin_destination_isolation_pass": true,
+  "out_of_order_rejection_pass": true,
+  "checkpoint_restart_pass": true,
+  "real_account_replay": {
+    "account": "C122034448",
+    "repeated_hour": 349,
+    "same_hour_events": 2,
+    "total_events": 22,
+    "historical_comparisons": 88,
+    "mismatches": 0
+  },
+  "history_rule": "strictly earlier PaySim steps",
+  "fraud_labels_used": false,
+  "test_data_used": false,
+  "stream_requires_globally_ordered_steps": true,
+  "kafka_watermark_late_event_handling_pending": true,
+  "full_feast_online_updates_pending": true,
+  "api_integration_pending": true,
+  "production_approved": false,
+  "completed_at_utc": "2026-11-04T17:04:13.477588+00:00"
+}

@@ -1,0 +1,70 @@
+{
+  "project": "AIML-01",
+  "rows": 6362620,
+  "fraud_count": 8213,
+  "fraud_rate": 0.001290820448180152,
+  "missing_values": {
+    "step": 0,
+    "type": 0,
+    "amount": 0,
+    "oldbalanceOrg": 0,
+    "newbalanceOrig": 0,
+    "oldbalanceDest": 0,
+    "newbalanceDest": 0,
+    "isFraud": 0,
+    "isFlaggedFraud": 0
+  },
+  "negative_amounts": 0,
+  "simulation_steps": 743,
+  "transaction_types": [
+    {
+      "type": "CASH_IN",
+      "total": 1399284,
+      "fraud": 0,
+      "legitimate": 1399284,
+      "fraud_rate_pct": 0.0
+    },
+    {
+      "type": "CASH_OUT",
+      "total": 2237500,
+      "fraud": 4116,
+      "legitimate": 2233384,
+      "fraud_rate_pct": 0.18395530726256984
+    },
+    {
+      "type": "DEBIT",
+      "total": 41432,
+      "fraud": 0,
+      "legitimate": 41432,
+      "fraud_rate_pct": 0.0
+    },
+    {
+      "type": "PAYMENT",
+      "total": 2151495,
+      "fraud": 0,
+      "legitimate": 2151495,
+      "fraud_rate_pct": 0.0
+    },
+    {
+      "type": "TRANSFER",
+      "total": 532909,
+      "fraud": 4097,
+      "legitimate": 528812,
+      "fraud_rate_pct": 0.7687991758442811
+    }
+  ],
+  "amount_statistics": [
+    {
+      "isFraud": 0,
+      "count": 6354407,
+      "mean_amount": 178197.0417274075,
+      "std_amount": 596236.9344319414
+    },
+    {
+      "isFraud": 1,
+      "count": 8213,
+      "mean_amount": 1467967.2991403872,
+      "std_amount": 2404106.574043038
+    }
+  ]
+}

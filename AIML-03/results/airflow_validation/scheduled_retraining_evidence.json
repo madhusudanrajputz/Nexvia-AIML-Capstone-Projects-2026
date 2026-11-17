@@ -1,0 +1,33 @@
+{
+  "verified_at_utc": "2026-11-03T16:54:59.111777+00:00",
+  "dag_id": "aiml03_retrieval_training_pipeline",
+  "run_id": "scheduled__2026-10-31T20:30:00+00:00",
+  "run_type": "scheduled",
+  "state": "success",
+  "tasks": [
+    {
+      "task_id": "rebuild_faiss",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-11-03 16:54:19.762632",
+      "end_date": "2026-11-03 16:54:25.828400"
+    },
+    {
+      "task_id": "train_retrieval",
+      "state": "success",
+      "try_number": 2,
+      "start_date": "2026-11-03 16:54:06.368121",
+      "end_date": "2026-11-03 16:54:18.889070"
+    },
+    {
+      "task_id": "validate_staging",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-11-03 16:54:26.296147",
+      "end_date": "2026-11-03 16:54:26.722080"
+    }
+  ],
+  "training_mode": "smoke",
+  "production_promotion": false,
+  "persistent_hosting_verified": false
+}

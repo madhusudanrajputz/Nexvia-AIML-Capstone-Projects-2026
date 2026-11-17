@@ -1,0 +1,22 @@
+{
+  "project": "AIML-01",
+  "stage": "12L",
+  "status": "PASS",
+  "transactions": 12,
+  "model_features": 23,
+  "comparisons": 276,
+  "mismatches": 0,
+  "online_nulls": 0,
+  "target_step": 377,
+  "precomputed_prior_hour_features": true,
+  "state_updates_tested": false,
+  "isolated_online_store": true,
+  "original_registry_unchanged": true,
+  "original_database_unchanged": true,
+  "production_online_parity_complete": false,
+  "live_account_state_updates_pending": true,
+  "inactive_account_freshness_pending": true,
+  "kafka_fastapi_integration_pending": true,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T17:00:16.378522+00:00"
+}

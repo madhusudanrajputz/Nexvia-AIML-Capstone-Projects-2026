@@ -1,0 +1,15 @@
+{
+  "timestamp_utc": "2026-11-03T16:42:41.398536+00:00",
+  "model": "ranking",
+  "runtime": "ONNX Runtime CPU",
+  "onnxruntime_version": "1.31.1",
+  "inference_status": "PASS",
+  "prediction": 0.5337831377983093,
+  "triton_server_used": false,
+  "triton_http_inference_verified": false,
+  "input_type": "synthetic_test_vector",
+  "limitations": [
+    "This test does not demonstrate NVIDIA Triton serving.",
+    "Prediction is not evaluated against a ground-truth label."
+  ]
+}

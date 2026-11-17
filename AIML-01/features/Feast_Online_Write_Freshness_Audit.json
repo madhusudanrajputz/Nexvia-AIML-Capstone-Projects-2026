@@ -1,0 +1,32 @@
+{
+  "project": "AIML-01",
+  "stage": "12P",
+  "status": "PASS",
+  "account_roles": 2,
+  "transactions_buffered": 1,
+  "feature_checks": 48,
+  "mismatches": 0,
+  "online_update_hour": 378,
+  "inactive_refresh_hour": 382,
+  "same_hour_leakage_prevented": true,
+  "inactive_staleness_demonstrated": true,
+  "inactive_staleness_values": {
+    "origin_hours_since_previous": {
+      "online": 1,
+      "correct_at_382": 5
+    },
+    "destination_hours_since_previous": {
+      "online": 1,
+      "correct_at_382": 5
+    }
+  },
+  "online_write_api": "write_to_online_store",
+  "serving_transformer_inputs": 23,
+  "global_hour_boundary_policy_pending": true,
+  "kafka_integration_pending": true,
+  "isolated_store": true,
+  "original_store_modified": false,
+  "full_streaming_integration_complete": false,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T17:09:05.831489+00:00"
+}

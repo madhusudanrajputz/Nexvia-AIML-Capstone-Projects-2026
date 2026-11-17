@@ -1,0 +1,49 @@
+{
+  "project": "AIML-01",
+  "dataset": "PaySim",
+  "rows": 6362620,
+  "split_counts": {
+    "train": {
+      "rows": 4463587,
+      "fraud": 3643
+    },
+    "validation": {
+      "rows": 943289,
+      "fraud": 560
+    },
+    "test": {
+      "rows": 955744,
+      "fraud": 4010
+    }
+  },
+  "history_rule": "Only previous simulation hours",
+  "within_hour_history_excluded": true,
+  "post_transaction_balance_features_excluded": true,
+  "device_location_features_available": false,
+  "first_hour_history_check": "PASS",
+  "negative_or_zero_gap_check": "PASS",
+  "columns": [
+    "transaction_id",
+    "step",
+    "split",
+    "type",
+    "amount",
+    "nameOrig",
+    "nameDest",
+    "oldbalanceOrg",
+    "oldbalanceDest",
+    "origin_previous_count",
+    "destination_previous_count",
+    "origin_previous_total",
+    "destination_previous_total",
+    "origin_previous_mean",
+    "destination_previous_mean",
+    "origin_hours_since_previous",
+    "destination_hours_since_previous",
+    "amount_vs_origin_mean",
+    "amount_vs_destination_mean",
+    "amount_to_origin_balance",
+    "amount_to_destination_balance",
+    "isFraud"
+  ]
+}

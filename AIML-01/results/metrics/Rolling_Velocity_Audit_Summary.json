@@ -1,0 +1,25 @@
+{
+  "project": "AIML-01",
+  "stage": "10B",
+  "source": "data/processed/PaySim_Historical_Features.parquet",
+  "velocity_dataset": "data/processed/PaySim_Velocity_Features.parquet",
+  "structural_checks": {
+    "Transaction count": true,
+    "Unique IDs": true,
+    "Fraud labels": true,
+    "Nonnegative and ordered windows": true,
+    "First-hour history": true
+  },
+  "independent_samples": 43,
+  "independent_samples_passed": 43,
+  "rolling_windows": [
+    6,
+    24
+  ],
+  "current_hour_excluded": true,
+  "future_hours_excluded": true,
+  "independent_audit_pass": true,
+  "test_labels_used_for_tuning": false,
+  "existing_models_modified": false,
+  "completed_at_utc": "2026-11-04T15:03:39.013991+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "project": "AIML-01",
+  "step": "14C",
+  "status": "PASS",
+  "alert_status": "REVIEW_REQUIRED",
+  "evaluation_scope": "offline_train_vs_validation",
+  "features_analyzed": 23,
+  "drifted_feature_count": 1,
+  "drifted_feature_share": 0.043478260869565216,
+  "drifted_features": [
+    "destination_hours_since_previous"
+  ],
+  "critical_drifted_features": [
+    "destination_hours_since_previous"
+  ],
+  "warning_reasons": [
+    "ONE_OR_MORE_DRIFTED_FEATURES",
+    "CRITICAL_FEATURE_DRIFT"
+  ],
+  "monitoring_data_review_required": true,
+  "automatic_retraining_triggered": false,
+  "model_retrained": false,
+  "model_promoted": false,
+  "production_alert_sent": false,
+  "sampling_caveat": "Reference and current datasets use different transaction-ID modulo sampling rates. Temporal representativeness requires further audit.",
+  "created_at_utc": "2026-11-15T19:12:27.699450+00:00"
+}

@@ -1,0 +1,44 @@
+{
+  "project": "AIML-01",
+  "dataset": "PaySim",
+  "split_strategy": "chronological_whole_simulation_hours",
+  "train_end_step": 323,
+  "validation_end_step": 377,
+  "test_end_step": 743,
+  "feature_availability": "pre_authorization_only",
+  "candidate_current_transaction_features": [
+    "step",
+    "type",
+    "amount",
+    "oldbalanceOrg",
+    "oldbalanceDest"
+  ],
+  "historical_features": [
+    "origin_previous_transaction_count",
+    "destination_previous_transaction_count",
+    "origin_previous_amount_mean",
+    "destination_previous_amount_mean",
+    "origin_previous_amount_total",
+    "destination_previous_amount_total",
+    "origin_previous_step",
+    "destination_previous_step",
+    "origin_amount_vs_historical_average",
+    "destination_amount_vs_historical_average"
+  ],
+  "historical_feature_rule": "Only information from completed earlier simulation steps may be used. Current and future step transactions must not contribute to the historical features.",
+  "excluded_model_inputs": [
+    "newbalanceOrig",
+    "newbalanceDest",
+    "isFraud",
+    "isFlaggedFraud"
+  ],
+  "unavailable_features": [
+    "device_id",
+    "device_change",
+    "location",
+    "location_change"
+  ],
+  "label_column": "isFraud",
+  "evaluation_primary": "average_precision_PR_AUC",
+  "random_split": false
+}

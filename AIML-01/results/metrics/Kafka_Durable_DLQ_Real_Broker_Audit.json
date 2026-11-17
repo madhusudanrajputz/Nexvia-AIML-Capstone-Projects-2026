@@ -1,0 +1,31 @@
+{
+  "project": "AIML-01",
+  "stage": "13N-K",
+  "status": "PASS",
+  "scope": "isolated_real_kafka_dlq_integration",
+  "kafka_version": "3.9.1",
+  "topic": "aiml01_13nk_dlq_integration_test",
+  "partition": 0,
+  "consumer_group": "aiml01_13nk_dlq_recovery_group_v1",
+  "broker_begin_offset": 0,
+  "broker_end_offset": 5,
+  "broker_committed_next_offset": 5,
+  "sqlite_next_offset": 5,
+  "processed_events": 2,
+  "quarantined_events": 3,
+  "feast_outbox_tasks": 1,
+  "raw_payload_hashes_verified": true,
+  "functional_tests_passed": 20,
+  "isolated_integration_tests_passed": 19,
+  "real_kafka_tests_passed": 21,
+  "total_tests_reported_passed": 60,
+  "verification_note": "Counts and broker/database state rechecked; individual historical test assertions originate from the preceding Colab outputs.",
+  "pending": [
+    "DLQ redrive workflow",
+    "actual process-kill recovery test",
+    "consumer rebalance test",
+    "oversized payload policy",
+    "production consumer deployment"
+  ],
+  "created_at_utc": "2026-11-15T19:44:29.934806+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "project": "AIML-01",
+  "step": "13N-G",
+  "status": "PASS",
+  "worker": "scripts/fraud_feast_delivery.py",
+  "worker_sha256": "bd66625202b6c3a526daec26124ba2d1c06de16f11bad5fd89d08d1cbdf6a216",
+  "snapshot_accounts": 80,
+  "feature_checks_per_delivery": 320,
+  "simulated_crash_pass": true,
+  "restart_retry_pass": true,
+  "repeated_restart_noop": true,
+  "original_artifacts_unchanged": true,
+  "live_kafka_consumer_integrated": false,
+  "atomic_state_and_outbox_creation": false,
+  "dlq_integrated": false
+}

@@ -1,0 +1,42 @@
+services:
+  - type: web
+    name: aiml01-fraud-api
+    runtime: docker
+    plan: starter
+    dockerfilePath: deployment/render/Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    disk:
+      name: aiml01-case-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: AIML01_CASE_DATABASE_PATH
+        value: /var/data/cases.db
+      - key: AIML01_DEPLOYMENT_API_KEY
+        generateValue: true
+      - key: AIML01_CASES_API_KEY
+        generateValue: true
+
+  - type: web
+    name: aiml01-dashboard
+    runtime: node
+    plan: free
+    rootDir: dashboard
+    buildCommand: npm install --no-audit --no-fund && npm run build
+    startCommand: npm run start -- -H 0.0.0.0 -p $PORT
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: AIML01_BACKEND_URL
+        sync: false
+      - key: AIML01_CASES_SERVICE_URL
+        sync: false
+      - key: AIML01_BACKEND_API_KEY
+        sync: false
+      - key: AIML01_CASES_API_KEY
+        sync: false
+      - key: AIML01_DASHBOARD_ACCESS_CODE
+        generateValue: true

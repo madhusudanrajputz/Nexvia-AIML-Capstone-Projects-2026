@@ -1,0 +1,62 @@
+
+M
+-
+__dummy"
+__dummy_idJaiml01_fraud_detection
+çè«×€Ôíöçè«×€Ôíö
+q
+Q
+destination_accountPaySim receiving account"nameDestJaiml01_fraud_detection
+çè«×÷çè«×÷
+n
+N
+origin_accountPaySim originating account"nameOrigJaiml01_fraud_detection
+çè«×¨ñÎ÷çè«×¨ñÎ÷1"$591a9cd1-4d0a-4c40-aa37-b2b3d5a2b409*Œë«×ˆãÇ²2®
+ú
+origin_account_historyaiml01_fraud_detectionorigin_account"
+origin_previous_count"
+origin_previous_total"
+origin_previous_mean"
+origin_hours_since_previous2€ç„:öevent_timestampZxv/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/origin_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢origin_account_file’çè«×Ø“²Œ"çè«×ÀÑÜõ@R.Origin account history from earlier hours onlyb
+nameOrig’latest/
+çè«×ğÃÿ÷Œë«×à»
+€ÏÑÊ€»Ì02Ü
+§
+destination_account_historyaiml01_fraud_detectiondestination_account"
+destination_previous_count"
+destination_previous_total"
+destination_previous_mean"$
+ destination_hours_since_previous2€ç„:€event_timestampZ}{/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/destination_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢destination_account_file’çè«×°ˆÈŒ"çè«×˜€³ö@R3Destination account history from earlier hours onlyb
+nameDest’latest0
+çè«×øÓÚøŒë«×è¯¤²
+€ÏÑÊ€»Ì0R
+Î
+,feast.infra.online_stores.sqlite.SqliteTable"
+g/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/online_store.db2aiml01_fraud_detection_destination_account_history
+É
+,feast.infra.online_stores.sqlite.SqliteTable"˜
+g/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/online_store.db-aiml01_fraud_detection_origin_account_historybevent_timestampZxv/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/origin_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢origin_account_fileªaiml01_fraud_detection’çè«×Ø“²Œ"çè«×ÀÑÜõb™event_timestampZ}{/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/destination_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢destination_account_fileªaiml01_fraud_detection’çè«×°ˆÈŒ"çè«×˜€³öŠ8
+
+aiml01_fraud_detection
+çè«×ğá¼çè«×ğá¼’Ø
+
+
+origin_account_historyaiml01_fraud_detection"feature_view*›
+ú
+origin_account_historyaiml01_fraud_detectionorigin_account"
+origin_previous_count"
+origin_previous_total"
+origin_previous_mean"
+origin_hours_since_previous2€ç„:öevent_timestampZxv/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/origin_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢origin_account_file’çè«×Ø“²Œ"çè«×ÀÑÜõ@R.Origin account history from earlier hours onlyb
+nameOrig’latest
+çè«×ğÃÿ÷çè«×ğÃÿ÷2çè«× ©ÖøB$8d22a735-809a-4e1f-8507-2346ad251938
+Â
+destination_account_historyaiml01_fraud_detection"feature_view*È
+§
+destination_account_historyaiml01_fraud_detectiondestination_account"
+destination_previous_count"
+destination_previous_total"
+destination_previous_mean"$
+ destination_hours_since_previous2€ç„:€event_timestampZ}{/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/destination_account_history.parquetŠ1feast.infra.offline_stores.file_source.FileSource¢destination_account_file’çè«×°ˆÈŒ"çè«×˜€³ö@R3Destination account history from earlier hours onlyb
+nameDest’latest
+çè«×øÓÚøçè«×øÓÚø2çè«×ø­ºùB$1e8ff47c-bdbf-4b98-9410-06c2b8bccc94

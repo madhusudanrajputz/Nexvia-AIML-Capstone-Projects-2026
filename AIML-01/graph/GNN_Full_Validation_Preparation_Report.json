@@ -1,0 +1,27 @@
+{
+  "project": "AIML-01",
+  "stage": "11G",
+  "validation_targets": 943289,
+  "validation_fraud": 560,
+  "validation_context_records": 3643340,
+  "maximum_history_per_account_role": 12,
+  "temporal_leakage_checks": {
+    "All validation targets present": true,
+    "Unique validation IDs": true,
+    "Fraud labels preserved": true,
+    "No same-hour or future context": true,
+    "No target transaction in context": true,
+    "No test-hour relationships": true,
+    "Account relationships valid": true,
+    "Maximum 12 edges per account role": true,
+    "No historical fraud labels": true
+  },
+  "previous_sample_context_parity": true,
+  "all_validation_targets_included": true,
+  "full_validation_graph_inference_completed": false,
+  "graphsage_metrics_computed": false,
+  "historical_fraud_labels_excluded": true,
+  "test_dataset_used": false,
+  "existing_models_modified": false,
+  "completed_at_utc": "2026-11-04T15:42:46.134331+00:00"
+}

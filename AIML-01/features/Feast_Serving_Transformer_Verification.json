@@ -1,0 +1,33 @@
+{
+  "project": "AIML-01",
+  "stage": "12K",
+  "status": "serving_transformer_verified",
+  "module": "scripts/fraud_serving_features.py",
+  "feature_count": 23,
+  "sample_transactions": 200,
+  "feature_comparisons": 4600,
+  "total_mismatches": 0,
+  "historical_hour_sentinel": -1,
+  "historical_sentinel_counts": {
+    "origin_previous_count": 0,
+    "origin_previous_total": 0,
+    "origin_previous_mean": 0,
+    "origin_hours_since_previous": 192,
+    "destination_previous_count": 0,
+    "destination_previous_total": 0,
+    "destination_previous_mean": 0,
+    "destination_hours_since_previous": 93
+  },
+  "single_event_test_pass": true,
+  "zero_balance_test_pass": true,
+  "invalid_sentinel_rejection_pass": true,
+  "saved_module_reload_pass": true,
+  "module_sha256": "63b4c2f1049a59a66cf6d0261033fadcb35f0b5294032a527f0ffd4137a088c2",
+  "online_feature_retrieval_pending": true,
+  "streaming_state_updates_pending": true,
+  "time_freshness_audit_pending": true,
+  "test_data_used": false,
+  "models_modified": false,
+  "feast_store_modified": false,
+  "completed_at_utc": "2026-11-04T16:54:12.045255+00:00"
+}

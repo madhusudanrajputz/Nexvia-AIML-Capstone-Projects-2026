@@ -1,0 +1,29 @@
+{
+  "project": "AIML-01",
+  "stage": "13N-K",
+  "scope": "isolated_real_kafka_redrive_end_to_end",
+  "status": "PASS",
+  "created_at_utc": "2026-11-15T20:04:17.921829+00:00",
+  "source_topic": "aiml01_13nk_redrive_delivery_source_test",
+  "destination_topic": "aiml01_13nk_redrive_delivery_destination_test",
+  "consumer_group": "aiml01_13nk_redrive_downstream_group_v1",
+  "corrected_event_id": "paysim:960000001",
+  "corrected_payload_sha256": "09840a17482205ab05d4f9dbf2070a935993e59b57cf114ecb9dbee812c44ab6",
+  "destination_partition": 0,
+  "destination_offset": 0,
+  "kafka_committed_next_offset": 1,
+  "downstream_sqlite_next_offset": 1,
+  "downstream_processed_event_count": 1,
+  "source_outbox_status": "CONFIRMED",
+  "original_dlq_status": "QUARANTINED",
+  "independent_audit_checks_passed": 9,
+  "prior_runtime_checks_reported_passed": 172,
+  "production_redrive_enabled": false,
+  "limitations": [
+    "Isolated test evidence, not production certification",
+    "Actual process-kill and rebalance not yet verified",
+    "Automatic retry and duplicate reconciliation pending",
+    "Operator authentication and authorization pending",
+    "Persistent production Kafka and database hosting pending"
+  ]
+}

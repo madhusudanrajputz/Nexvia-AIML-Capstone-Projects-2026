@@ -1,0 +1,18 @@
+{
+  "project": "AIML-01",
+  "step": "13N-I",
+  "status": "PASS",
+  "module": "scripts/fraud_atomic_feast_state.py",
+  "sha256": "68e9cf2a573432e1788af596e32cd845a18684b3cdc0a356895b6f39d71581fe",
+  "tests_passed": 11,
+  "tests_total": 11,
+  "atomic_state_outbox_offset": true,
+  "hour_383_outbox_accounts": 80,
+  "hour_384_outbox_accounts": 82,
+  "rollback_verified": true,
+  "restart_verified": true,
+  "original_database_modified": false,
+  "original_feast_modified": false,
+  "live_kafka_broker_integrated": false,
+  "dlq_integrated": false
+}

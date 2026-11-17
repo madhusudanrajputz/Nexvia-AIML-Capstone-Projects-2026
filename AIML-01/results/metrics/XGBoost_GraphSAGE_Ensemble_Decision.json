@@ -1,0 +1,58 @@
+{
+  "project": "AIML-01",
+  "stage": "11I",
+  "validation_rows": 943289,
+  "validation_fraud_count": 560,
+  "model_selection_data": "chronological_validation",
+  "experiment_type": "fixed_score_blending",
+  "blend_scores_calibrated": false,
+  "weights_evaluated": [
+    0.0,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "fpr_budget": 0.0001,
+  "incumbent": {
+    "model": "XGBoost_Unweighted_Baseline",
+    "average_precision": 0.9628933681139408,
+    "existing_threshold": 0.48456997,
+    "metrics": {
+      "threshold": 0.48456997,
+      "precision": 0.842809364548495,
+      "recall": 0.9,
+      "f1": 0.8704663212435233,
+      "fpr": 9.971052126326867e-05,
+      "tp": 504,
+      "fp": 94,
+      "tn": 942635,
+      "fn": 56
+    }
+  },
+  "gnn_alone": {
+    "average_precision": 0.02085182769073154,
+    "fpr_budget_threshold": 0.9984962940216064,
+    "recall": 0.0,
+    "false_positives": 1
+  },
+  "decision": "KEEP_XGBOOST_ONLY",
+  "selected_gnn_weight": 0.0,
+  "selected_validation_ap": 0.9628933681139408,
+  "selected_validation_recall": 0.9,
+  "selected_validation_fp": 94,
+  "model_selection_guardrails": {
+    "minimum_ap_improvement": 0.001,
+    "no_lower_tp_than_incumbent": true,
+    "no_higher_fp_than_incumbent": true
+  },
+  "selection_bias_warning": "Blend weights and thresholds were compared on validation labels. Results are not an independent generalization estimate.",
+  "fraud_ring_detection_pending": true,
+  "test_dataset_used": false,
+  "mlflow_candidate_modified": false,
+  "production_model_changed": false,
+  "completed_at_utc": "2026-11-04T16:13:26.935957+00:00"
+}

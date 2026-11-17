@@ -1,0 +1,44 @@
+{
+  "project": "AIML-01",
+  "stage": "12F",
+  "status": "full_sources_registered",
+  "persistent_repo": "feast_repo_full",
+  "registered_feature_views": {
+    "origin_account_history": {
+      "source_path": "/content/real_google_drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/full_data/origin_account_history_full.parquet",
+      "source_exists": true,
+      "features": [
+        "origin_hours_since_previous",
+        "origin_previous_count",
+        "origin_previous_mean",
+        "origin_previous_total"
+      ]
+    },
+    "destination_account_history": {
+      "source_path": "/content/real_google_drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/full_data/destination_account_history_full.parquet",
+      "source_exists": true,
+      "features": [
+        "destination_hours_since_previous",
+        "destination_previous_count",
+        "destination_previous_mean",
+        "destination_previous_total"
+      ]
+    }
+  },
+  "registered_entities": {
+    "destination_account": "nameDest",
+    "origin_account": "nameOrig"
+  },
+  "historical_feature_count": 8,
+  "historical_source_rows": {
+    "origin": 5406834,
+    "destination": 5098915
+  },
+  "original_pilot_store_unchanged": true,
+  "point_in_time_retrieval_verified": false,
+  "all_23_model_inputs_parity_verified": false,
+  "online_materialization_verified": false,
+  "streaming_integration_verified": false,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T16:39:41.266092+00:00"
+}

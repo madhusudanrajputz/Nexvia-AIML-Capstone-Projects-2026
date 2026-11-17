@@ -1,0 +1,23 @@
+{
+  "project": "AIML-01",
+  "step": "13J",
+  "status": "PASS",
+  "persistent_feast_http_service": true,
+  "transactions": 4,
+  "historical_comparisons": 32,
+  "historical_mismatches": 0,
+  "model_feature_comparisons": 92,
+  "model_feature_mismatches": 0,
+  "warm_http_lookup_p50_ms": 6.665026000518992,
+  "warm_http_lookup_p95_ms": 13.115218749862834,
+  "warm_http_lookup_p99_ms": 14.023308549858482,
+  "latency_scope": "persistent Feast local HTTP lookup",
+  "correct_raw_reference": "historical.parquet, aligned by transaction_id",
+  "correct_model_reference": "reference.parquet, aligned by transaction_id",
+  "service_module": "api/feast_feature_service.py",
+  "full_http_api_latency_pending": true,
+  "kafka_hour_boundary_online_writes_pending": true,
+  "production_authentication_pending": true,
+  "test_data_used": false,
+  "created_at_utc": "2026-11-04T17:45:16.447079+00:00"
+}

@@ -1,0 +1,160 @@
+{
+  "project": "AIML-01",
+  "stage": "12C",
+  "result": "PASSED",
+  "feast_version": "0.67.0",
+  "model_feature_count": 23,
+  "model_features": [
+    "amount_log",
+    "origin_balance_log",
+    "destination_balance_log",
+    "type_cash_in",
+    "type_cash_out",
+    "type_debit",
+    "type_payment",
+    "type_transfer",
+    "origin_previous_count",
+    "origin_previous_total_log",
+    "origin_previous_mean_log",
+    "origin_hours_since_previous",
+    "destination_previous_count",
+    "destination_previous_total_log",
+    "destination_previous_mean_log",
+    "destination_hours_since_previous",
+    "amount_vs_origin_mean",
+    "amount_vs_destination_mean",
+    "amount_to_origin_balance",
+    "amount_to_destination_balance",
+    "origin_has_history",
+    "destination_has_history",
+    "origin_balance_insufficient"
+  ],
+  "registered_feature_names": [
+    "destination_hours_since_previous",
+    "destination_previous_count",
+    "destination_previous_mean",
+    "destination_previous_total",
+    "nameDest",
+    "nameOrig",
+    "origin_hours_since_previous",
+    "origin_previous_count",
+    "origin_previous_mean",
+    "origin_previous_total"
+  ],
+  "registered_feature_count": 10,
+  "entities": [
+    {
+      "name": "destination_account",
+      "join_key": "nameDest",
+      "description": "PaySim receiving account"
+    },
+    {
+      "name": "origin_account",
+      "join_key": "nameOrig",
+      "description": "PaySim originating account"
+    }
+  ],
+  "feature_views": [
+    {
+      "name": "origin_account_history",
+      "entities": [
+        "origin_account"
+      ],
+      "ttl_seconds": 31536000.0,
+      "features": [
+        {
+          "name": "origin_previous_total",
+          "dtype": "Float64"
+        },
+        {
+          "name": "origin_previous_mean",
+          "dtype": "Float64"
+        },
+        {
+          "name": "origin_previous_count",
+          "dtype": "Int64"
+        },
+        {
+          "name": "origin_hours_since_previous",
+          "dtype": "Int64"
+        },
+        {
+          "name": "nameOrig",
+          "dtype": "String"
+        }
+      ],
+      "registered_source_path": "/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/origin_account_history.parquet"
+    },
+    {
+      "name": "destination_account_history",
+      "entities": [
+        "destination_account"
+      ],
+      "ttl_seconds": 31536000.0,
+      "features": [
+        {
+          "name": "destination_previous_count",
+          "dtype": "Int64"
+        },
+        {
+          "name": "nameDest",
+          "dtype": "String"
+        },
+        {
+          "name": "destination_hours_since_previous",
+          "dtype": "Int64"
+        },
+        {
+          "name": "destination_previous_total",
+          "dtype": "Float64"
+        },
+        {
+          "name": "destination_previous_mean",
+          "dtype": "Float64"
+        }
+      ],
+      "registered_source_path": "/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/destination_account_history.parquet"
+    }
+  ],
+  "registered_source_path_checks": [
+    {
+      "feature_view": "origin_account_history",
+      "registered_path": "/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/origin_account_history.parquet",
+      "path_exists": false,
+      "uses_old_mount": true
+    },
+    {
+      "feature_view": "destination_account_history",
+      "registered_path": "/content/drive/MyDrive/Madhusudan_Kumar_Singh_Capstone_Projects/AIML-01/feast_repo/data/destination_account_history.parquet",
+      "path_exists": false,
+      "uses_old_mount": true
+    }
+  ],
+  "model_features_not_directly_in_feast": [
+    "amount_log",
+    "origin_balance_log",
+    "destination_balance_log",
+    "type_cash_in",
+    "type_cash_out",
+    "type_debit",
+    "type_payment",
+    "type_transfer",
+    "origin_previous_total_log",
+    "origin_previous_mean_log",
+    "destination_previous_total_log",
+    "destination_previous_mean_log",
+    "amount_vs_origin_mean",
+    "amount_vs_destination_mean",
+    "amount_to_origin_balance",
+    "amount_to_destination_balance",
+    "origin_has_history",
+    "destination_has_history",
+    "origin_balance_insufficient"
+  ],
+  "original_registry_and_online_unchanged": true,
+  "full_historical_parity_pending": true,
+  "full_online_parity_pending": true,
+  "streaming_integration_pending": true,
+  "test_labels_used": false,
+  "created_at_utc": "2026-11-04T16:28:24.008671+00:00"
+}

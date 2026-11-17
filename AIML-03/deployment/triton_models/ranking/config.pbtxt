@@ -1,0 +1,38 @@
+name: "ranking"
+backend: "onnxruntime"
+max_batch_size: 16
+
+input [
+  {
+    name: "user_input"
+    data_type: TYPE_INT32
+    dims: [1]
+    reshape: { shape: [] }
+  },
+  {
+    name: "movie_input"
+    data_type: TYPE_INT32
+    dims: [1]
+    reshape: { shape: [] }
+  },
+  {
+    name: "numeric_input"
+    data_type: TYPE_FP32
+    dims: [4]
+  }
+]
+
+output [
+  {
+    name: "Identity:0"
+    data_type: TYPE_FP32
+    dims: [1]
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_CPU
+    count: 1
+  }
+]

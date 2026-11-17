@@ -1,0 +1,47 @@
+{
+  "component": "Apache Spark Feature Engineering",
+  "result": "PASS",
+  "verified_at_utc": "2026-11-03T19:14:36.430315+00:00",
+  "spark_version": "4.0.5",
+  "source_script": "preprocessing/build_spark_features.py",
+  "script_sha256": "26d4c765a500aa78ce35a1fbf31a1305e35d0c7960e5be0181f39fedb22e8e2e",
+  "cutoff_timestamp": 1466837397,
+  "comparison": {
+    "movie_features": {
+      "original_rows": 34461,
+      "regenerated_rows": 34461,
+      "same_columns": true,
+      "mismatched_rows": 0,
+      "result": "PASS"
+    },
+    "user_features": {
+      "original_rows": 137883,
+      "regenerated_rows": 137883,
+      "same_columns": true,
+      "mismatched_rows": 0,
+      "result": "PASS"
+    },
+    "movie_catalog": {
+      "original_rows": 62423,
+      "regenerated_rows": 62423,
+      "same_columns": true,
+      "mismatched_rows": 0,
+      "result": "PASS"
+    },
+    "user_genre_features": {
+      "original_rows": 2256087,
+      "regenerated_rows": 2256087,
+      "same_columns": true,
+      "mismatched_rows": 0,
+      "result": "PASS"
+    },
+    "popularity_baseline": {
+      "original_rows": 8806,
+      "regenerated_rows": 8806,
+      "same_columns": true,
+      "mismatched_rows": 0,
+      "result": "PASS"
+    }
+  },
+  "notes": "Reconstructed pipeline reproduced five existing datasets using the reported Spark comparison with 1e-6 numerical tolerance. Does not independently establish that all downstream model features are leakage-free."
+}

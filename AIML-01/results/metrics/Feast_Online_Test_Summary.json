@@ -1,0 +1,14 @@
+{
+  "project": "AIML-01",
+  "component": "Feast online feature serving",
+  "feast_version": "0.67.0",
+  "online_store": "SQLite",
+  "test_scope": "3000-transaction pilot only",
+  "accounts_per_role": 20,
+  "feature_checks": 8,
+  "passed_checks": 8,
+  "overall_pass": true,
+  "latest_snapshot_only": true,
+  "full_dataset_materialized": false,
+  "kafka_integration_tested": false
+}

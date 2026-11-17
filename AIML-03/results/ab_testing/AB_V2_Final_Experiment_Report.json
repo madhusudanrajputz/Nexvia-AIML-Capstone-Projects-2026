@@ -1,0 +1,89 @@
+{
+  "experiment_id": "aiml03_synthetic_ab_demo_v2",
+  "generated_at_utc": "2026-11-03T16:39:56.781790+00:00",
+  "project": "AIML-03 Personalized Movie Recommendation Engine",
+  "variants": {
+    "A": "Popularity Baseline",
+    "B": "Two-Stage V1 + Ranking"
+  },
+  "experiment_design": {
+    "assignment": "Seeded, user-level, balanced 50/50 assignment",
+    "participants": 55,
+    "traffic_type": "synthetic",
+    "real_online_traffic": false,
+    "impressions_per_user": 10,
+    "click_probability": "0.12 / sqrt(position)",
+    "clicks_based_on_relevance": false
+  },
+  "synthetic_ctr": {
+    "A": {
+      "users": 28,
+      "impressions": 280,
+      "clicks": 10,
+      "ctr": 0.0357142857142857
+    },
+    "B": {
+      "users": 27,
+      "impressions": 270,
+      "clicks": 13,
+      "ctr": 0.0481481481481481
+    },
+    "difference_B_minus_A": {
+      "absolute_ctr_difference_B_minus_A": 0.012433862433862436,
+      "ci_95_lower": -0.019976851851851846,
+      "ci_95_upper": 0.04193452380952376,
+      "bootstrap_iterations": 10000,
+      "resampling_unit": "user",
+      "synthetic": true,
+      "causal_uplift_established": false
+    }
+  },
+  "offline_model_evaluation": {
+    "evaluation_type": "preliminary_paired_offline_evaluation",
+    "evaluated_users": 55,
+    "bootstrap_iterations": 10000,
+    "metrics": [
+      {
+        "metric": "recall_at_10",
+        "evaluated_users": 55,
+        "mean_A": 0.04418627733786832,
+        "mean_B": 0.024383706132465995,
+        "mean_difference_B_minus_A": -0.019802571205402325,
+        "ci_95_lower": -0.03174302007998762,
+        "ci_95_upper": -0.009279920317407906,
+        "B_better_users": 1,
+        "B_worse_users": 15,
+        "equal_users": 39
+      },
+      {
+        "metric": "ndcg_at_10",
+        "evaluated_users": 55,
+        "mean_A": 0.07758182755026123,
+        "mean_B": 0.04122764765077131,
+        "mean_difference_B_minus_A": -0.036354179899489907,
+        "ci_95_lower": -0.0606868980062904,
+        "ci_95_upper": -0.011234618168287733,
+        "B_better_users": 3,
+        "B_worse_users": 17,
+        "equal_users": 35
+      }
+    ],
+    "limitations": [
+      "Evaluation uses only 55 selected users.",
+      "Retrieval and ranking training cutoffs are not fully aligned.",
+      "Historical feature snapshots require leakage auditing.",
+      "Popularity results differ slightly from earlier preliminary evaluation.",
+      "Confidence intervals are conditional on this selected user sample.",
+      "No real-world CTR or conversion rate is measured."
+    ]
+  },
+  "interpretation": {
+    "synthetic_pipeline": "PASS",
+    "real_ctr_measured": false,
+    "online_ab_test_completed": false,
+    "causal_uplift_established": false,
+    "offline_preferred_model": "Popularity Baseline",
+    "two_stage_model_promoted": false,
+    "reason": "The Two-Stage recommender underperforms the Popularity Baseline in preliminary paired offline ranking metrics. Synthetic CTR is not evidence of model performance."
+  }
+}

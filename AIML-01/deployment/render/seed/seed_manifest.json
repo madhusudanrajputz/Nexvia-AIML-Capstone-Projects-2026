@@ -1,0 +1,15 @@
+{
+  "purpose": "fixed_hour_development_demonstration",
+  "event_id": "paysim:5393914",
+  "simulation_hour": 377,
+  "historical_feature_parity": "8/8_PASS",
+  "feature_origin": "processed_PaySim_historical_features",
+  "snapshot_sha256": "3984c7a9536c558d8298891e0031185a7765cad14d7f85c8bdf87f01eadf40af",
+  "created_at_utc": "2026-11-16T19:39:30.055870+00:00",
+  "limitations": [
+    "Not a continuously updated feature store",
+    "Not a Kafka streaming deployment",
+    "Only demonstrated event parity is verified",
+    "Historical account values are from PaySim"
+  ]
+}

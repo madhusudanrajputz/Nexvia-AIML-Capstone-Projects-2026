@@ -1,0 +1,20 @@
+{
+  "project": "AIML-01",
+  "component": "Feast",
+  "version": "0.67.0",
+  "configuration": "local_file_offline_sqlite_online",
+  "pilot_transactions": 3000,
+  "origin_feature_records": 3000,
+  "destination_feature_records": 2385,
+  "feature_views": [
+    "origin_account_history",
+    "destination_account_history"
+  ],
+  "history_rule": "Previous simulation hours only",
+  "synthetic_timestamps": true,
+  "timestamp_base": "2026-01-01T00:00:00Z",
+  "registry_apply_pass": true,
+  "historical_retrieval_tested": false,
+  "online_retrieval_tested": false,
+  "full_dataset_materialized": false
+}

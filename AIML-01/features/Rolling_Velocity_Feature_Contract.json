@@ -1,0 +1,25 @@
+{
+  "project": "AIML-01",
+  "stage": "10A",
+  "source": "data/processed/PaySim_Historical_Features.parquet",
+  "output": "data/processed/PaySim_Velocity_Features.parquet",
+  "rows": 6362620,
+  "added_features": [
+    "origin_txn_count_6h",
+    "origin_txn_count_24h",
+    "origin_amount_total_6h",
+    "origin_amount_total_24h",
+    "destination_txn_count_6h",
+    "destination_txn_count_24h",
+    "destination_amount_total_6h",
+    "destination_amount_total_24h"
+  ],
+  "history_rule": "Only step-6 through step-1 or step-24 through step-1",
+  "current_hour_excluded": true,
+  "synthetic_hour_definition": true,
+  "structural_checks_passed": true,
+  "independent_window_audit_pending": true,
+  "xgboost_retraining_required_to_use_new_features": true,
+  "streaming_feature_parity_pending": true,
+  "created_at_utc": "2026-11-04T14:58:18.645593+00:00"
+}

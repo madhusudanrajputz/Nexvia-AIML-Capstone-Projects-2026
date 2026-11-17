@@ -1,0 +1,23 @@
+{
+  "project": "AIML-01",
+  "stage": "11K",
+  "training_candidate_count": 23914,
+  "training_transactions": 4463587,
+  "training_fraud": 3643,
+  "training_covered_fraud": 354,
+  "training_enrichment": 0.6583098280317953,
+  "validation_transactions": 943289,
+  "validation_fraud": 560,
+  "frozen_candidate_validation_transactions": 41358,
+  "frozen_candidate_validation_fraud": 12,
+  "validation_enrichment": 0.48874064786222055,
+  "candidate_ranking_updated": false,
+  "validation_labels_used_for_ranking": false,
+  "quality_decision": "RESEARCH_CANDIDATES_ONLY",
+  "production_fraud_ring_alerts_approved": false,
+  "graph_candidates_are_confirmed_rings": false,
+  "multi_hop_community_detection_pending": true,
+  "test_data_used": false,
+  "existing_ml_models_modified": false,
+  "completed_at_utc": "2026-11-04T16:19:08.121677+00:00"
+}
